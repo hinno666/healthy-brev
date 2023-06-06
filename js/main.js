@@ -30,7 +30,7 @@ $(document).ready(function () {
 
 
 /*POPUP VANILA JS FUNCTIONAL*/
-let openPopup = document.querySelector('.header__button');
+let openPopup = document.querySelectorAll('.button');
 let closePopup = document.querySelector('.modal__form-close');
 let popup = document.querySelector('.modal__form-shadow');
 
@@ -44,7 +44,10 @@ function close() {
   popup.classList.remove('open__popup')
 }
 
-openPopup.addEventListener('click', open);
+openPopup.forEach((btn) => {
+  btn.addEventListener("click", open);
+
+});
 closePopup.addEventListener('click', close);
 
 
@@ -55,26 +58,36 @@ window.addEventListener('click', (e) => {
 });
 
 
+const cards = document.querySelectorAll(".dishes__card");
 
+cards.forEach((card) => {
+  const stars = card.querySelectorAll(".star");
+  const ratingElement = card.querySelector(".rating");
+  let selectedValue = parseInt(ratingElement.getAttribute("data-rating"));
 
+  stars.forEach((star) => {
+    star.addEventListener("mouseover", () => {
+      const hoverValue = parseInt(star.getAttribute("data-value"));
 
+      stars.forEach((star, index) => {
+        star.classList.toggle("selected", index < hoverValue);
+      });
+    });
 
+    star.addEventListener("click", () => {
+      const clickedValue = parseInt(star.getAttribute("data-value"));
 
+      selectedValue = clickedValue;
+      ratingElement.setAttribute("data-rating", selectedValue);
 
+      stars.forEach((star, index) => {
+        star.classList.toggle("selected", index < selectedValue);
+      });
+    });
+  });
 
-
-
-/** RAITING FUNCTIONAL*/
-
-// const raintingItemsList = document.querySelectorAll(".dishes__raiting-item");
-
-
-// raintingItemsList.forEach((item) => {
-//   item.addEventListener("click", () => {
-//     const counter = item.dataset.itemValue;
-//     item.parentNode.dataset.totalValue = counter;
-//     const counterElement = item.parentNode.parentNode.lastElementChild;
-//     console.log(counterElement);
-//     counterElement.innerText = counter;
-//   });
-// });
+  // Инициализация рейтинга
+  stars.forEach((star, index) => {
+    star.classList.toggle("selected", index < selectedValue);
+  });
+});

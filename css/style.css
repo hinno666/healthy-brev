@@ -101,7 +101,6 @@ body {
   color: #a6a6a6;
 }
 
-
 /*TITLE BLOCK*/
 .title__container {
   display: flex;
@@ -115,11 +114,10 @@ section:hover .line {
   width: 150px;
 }
 .line {
-  background: #34C759;
+  background: #34c759;
   width: 60px;
   height: 2px;
   transition: 0.5s ease;
-
 }
 .title {
   font-weight: 900;
@@ -132,18 +130,13 @@ section:hover .line {
   font-weight: 400;
   font-size: 30px;
   line-height: 60px;
-  color: #D9D9D9;
+  color: #d9d9d9;
   position: absolute;
   top: 15px;
   left: 50%;
   transform: translate(-50%, 50%);
 }
 /*----------------------------------------------------------*/
-
-
-.wrapper {
-
-}
 .header {
   min-height: 100vh;
   background-image: url(../img/bg.jpg);
@@ -250,7 +243,7 @@ section:hover .line {
 /*header__content STYLES*/
 
 .header__content {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   margin-top: 80px;
   color: #fff;
   text-align: center;
@@ -275,13 +268,13 @@ section:hover .line {
 
 .button {
   padding: 25px 57px;
-  background: #34C759;
+  background: #34c759;
   border-radius: 43px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
-  color: #1A1A1A;
+  color: #1a1a1a;
   margin-top: 40px;
   transition: 0.5s ease;
 }
@@ -324,13 +317,11 @@ section {
   text-align: center;
   margin-top: 160px;
 }
-.about__title-container {
-}
 .about__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
-  color: #A6A6A6;
+  color: #a6a6a6;
 }
 
 /*SLIDER STYLES*/
@@ -346,27 +337,21 @@ section {
   height: 270px;
   width: 350px;
 }
-.slider{
+.slider {
   overflow: hidden;
   width: 735px;
 }
-/* Слайдер запущен */
-.slick-slider.slick-initialized{}
-/* Слайдер с точками */
-.slick-slider.slick-dotted{}
-/* Ограничивающая оболочка */
-.slick-list {}
 /* Лента слайдов */
-.slick-track{
+.slick-track {
   display: flex;
   justify-content: center;
 }
 /* Слайд */
-.slick-slide img{
+.slick-slide img {
   border-radius: 10px;
 }
 /* Стрелка */
-.slick-arrow{
+.slick-arrow {
   position: absolute;
   z-index: 1;
   bottom: 50%;
@@ -376,20 +361,17 @@ section {
   height: 60px;
 }
 /* Стрелка влево */
-.slick-arrow.slick-prev{
+.slick-arrow.slick-prev {
   background: url(./../img/slider/prev.svg) no-repeat;
   left: 40px;
-
 }
 /* Стрелка вправо */
-.slick-arrow.slick-next{
+.slick-arrow.slick-next {
   background: url(./../img/slider/next.svg) no-repeat;
   background-size: 100%;
   font-size: 0;
   right: 40px;
-
 }
-
 
 /*WORK*/
 
@@ -415,64 +397,148 @@ section {
 }
 .work__item:hover {
   color: #000;
-  background: #34C759;
+  background: #34c759;
 }
 .work__item-title {
   font-weight: 400;
-font-size: 22px;
-line-height: 26px;
-letter-spacing: -0.275px;
-text-transform: capitalize;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.275px;
+  text-transform: capitalize;
 }
 .work__item-inderline {
-  background: #34C759;
+  background: #34c759;
   width: 56px;
   height: 2px;
   transition: 0.5s ease;
 }
 .work__item-text {
   font-weight: 400;
-font-size: 13px;
-line-height: 18px;
-letter-spacing: -0.1625px;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1625px;
+}
+
+/*DISHES*/
+
+.dishes__cards {
+  color: #a4a8b2;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.15px;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  gap: 30px;
+}
+.dishes__card {
+  position: relative;
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.dishes__card::after {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: url(../img/cards/arrowbtn.svg) no-repeat center center #000000bd;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+.dishes__card:hover::after {
+  background: url(../img/cards/arrowbtn.svg) no-repeat center center #17632acb;
+}
+.dishes__card-img {
+  overflow: hidden;
+}
+.dishes__card-img img {
+  border-radius: 7px 7px 0px 0px;
+}
+.dishes__card-descr {
+  padding: 30px;
+}
+.dishes__card-title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 30px;
+  color: #d9d9d9;
+}
+.dishes__card-text {
+  margin-top: 20px;
+}
+.dishes__card-raiting {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dishes__card-stars {
+  display: flex;
+}
+.card__btn {
+  cursor: pointer;
+  padding: 5px 32px;
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.rating {
+  display: inline-block;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.star {
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.star:hover,
+.star.selected {
+  color: gold;
 }
 
 /*MEDIA QUERIES*/
-@media(max-width: 930px) {
+@media (max-width: 930px) {
   .header__title {
     font-size: 55px;
   }
   .title {
-  font-weight: 900;
-  font-size: 75px;
-  line-height: 150px;
- 
+    font-weight: 900;
+    font-size: 75px;
+    line-height: 150px;
+  }
+  .subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+  }
 }
-.subtitle {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 60px;
-}
-}
-
 
 @media (max-width: 767px) {
   .header__title {
     font-size: 35px;
-}
-.subtitle {
-  font-size: 14px;
-}
-.header__contacts {
-  flex-direction: column;
-}
-.header__contacts-item {
-  flex: 0 1 200px;
-}
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .header__contacts {
+    flex-direction: column;
+  }
+  .header__contacts-item {
+    flex: 0 1 200px;
+  }
   .menu-burger__header {
-    position: relative; 
+    position: relative;
     z-index: 101;
-    width: 40px; 
+    width: 40px;
     height: 35px;
     display: block;
     margin-left: 10px;
@@ -526,15 +592,15 @@ letter-spacing: -0.1625px;
   .slider__item img {
     height: 170px;
     width: 250px;
+  }
+  .slick-arrow {
+    bottom: 0;
+  }
 }
-.slick-arrow {
-  bottom: 0;
-}
-}
-@media(max-width: 327px) {
+@media (max-width: 327px) {
   .title {
     font-size: 60px;
-}
+  }
 }
 
 /*POPUP FORM*/
@@ -571,9 +637,9 @@ letter-spacing: -0.1625px;
 }
 .modal__form-close {
   cursor: pointer;
- position: absolute;
- right: 10px;
- font-size: 30px; 
+  position: absolute;
+  right: 10px;
+  font-size: 30px;
 }
 .feedback-form {
   display: flex;
@@ -607,10 +673,9 @@ letter-spacing: -0.1625px;
 .feedback-form__textarea {
   resize: vertical;
 }
-.feedback-form__button  {
+.feedback-form__button {
   padding: 10px;
 }
-
 
 @media (max-width: 768px) {
   .feedback-form {
