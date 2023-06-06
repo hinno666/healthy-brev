@@ -505,6 +505,65 @@ section {
   color: gold;
 }
 
+/*RECIPES*/
+.recipes__container {
+  margin-top: 60px;
+  display: flex;
+}
+.recipes__left-card {
+  background: linear-gradient(
+      180deg,
+      rgba(38, 38, 38, 0.0001) 0%,
+      rgba(38, 38, 38, 0.5) 100%
+    ),
+    url(./../img/recipes/card-bg.jpg) no-repeat;
+  border-radius: 6px;
+  flex: 0 1 540px;
+  padding: 60px 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+.recipes__left-card-title {
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  background: #00000093;
+  margin: 0 auto;
+  mix-blend-mode: normal;
+  width: 120px;
+  text-align: center;
+  border-radius: 10px;
+}
+.recipes__left-card-date {
+  margin-top: 65px;
+}
+.recipes__left-card-subtitle {
+  margin-top: 25px;
+  font-size: 24px;
+  line-height: 40px;
+}
+.recipes__left-card-name {
+  margin-top: 45px;
+}
+.recipes__left-card-icons {
+  margin-top: 65px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+    font-weight: 700;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+
+
 /*MEDIA QUERIES*/
 @media (max-width: 930px) {
   .header__title {
