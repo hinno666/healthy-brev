@@ -1,5 +1,4 @@
 /*BURGER MENU && SLICK-SLIDER jQuery CODE*/
-
 $(document).ready(function () {
   let menu = document.querySelector('.menu');
   $(".menu-burger__header").click(function () {
@@ -27,7 +26,7 @@ $(document).ready(function () {
   });
 });
 
-
+//--------------------------------------------------------------------------------------------------//
 
 /*POPUP VANILA JS FUNCTIONAL*/
 let openPopup = document.querySelectorAll('.button');
@@ -57,7 +56,9 @@ window.addEventListener('click', (e) => {
     }
 });
 
+//--------------------------------------------------------------------------------------------------//
 
+//STARS VANILA JS FUNCTIONAL
 const cards = document.querySelectorAll(".dishes__card");
 
 cards.forEach((card) => {
@@ -86,8 +87,21 @@ cards.forEach((card) => {
     });
   });
 
-  // Инициализация рейтинга
   stars.forEach((star, index) => {
     star.classList.toggle("selected", index < selectedValue);
+  });
+});
+
+//--------------------------------------------------------------------------------------------------//
+
+$(document).ready(function() {
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 1000); // Adjust the duration (in milliseconds) as needed
+    }
   });
 });

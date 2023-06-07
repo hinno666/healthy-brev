@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" id="header">
         <div class="header__underline">
           <div class="container">
             <div class="header__row">
@@ -28,10 +28,10 @@
                   <li class="menu__item menu__item-active">
                     <a href="">About</a>
                   </li>
-                  <li class="menu__item"><a href="">Work</a></li>
-                  <li class="menu__item"><a href="">Dishes</a></li>
-                  <li class="menu__item"><a href="">Recipes</a></li>
-                  <li class="menu__item"><a href="">Contacts</a></li>
+                  <li class="menu__item"><a href="#work">Work</a></li>
+                  <li class="menu__item"><a href="#dishes">Dishes</a></li>
+                  <li class="menu__item"><a href="#recipes">Recipes</a></li>
+                  <li class="menu__item"><a href="#footer">Contacts</a></li>
                 </ul>
               </nav>
             </div>
@@ -82,7 +82,7 @@
         </div>
       </header>
       <main class="main">
-        <section class="about">
+        <section class="about" id="about">
           <div class="container">
             <div class="about__description">
               <div class="about__title-container title__container">
@@ -121,7 +121,7 @@
             </div>
           </div>
         </section>
-        <section class="work">
+        <section class="work" id="work">
           <div class="container">
             <div class="work__description">
               <div class="work__title-container title__container">
@@ -166,7 +166,7 @@
             </div>
           </div>
         </section>
-        <section class="dishes">
+        <section class="dishes" id="dishes">
           <div class="container">
             <div class="dishes__description">
               <div class="work__title-container title__container">
@@ -329,7 +329,7 @@
             </div>
           </div>
         </section>
-        <section class="recipes">
+        <section class="recipes" id="recipes">
           <div class="container">
             <div class="recipes__description">
               <div class="recipes__title-container title__container">
@@ -344,17 +344,141 @@
                   <div class="recipes__left-card-subtitle">SCHREK IS THE BEST OGRE EVER</div>
                   <div class="recipes__left-card-name">Jason Keller</div>
                   <div class="recipes__left-card-icons">
-                    <div class="watches">275</div>
-                    <div class="comments">12</div>
+                    <div class="watches"><img src="img/recipes/eye.svg" alt=""><span>275</span></div>
+                    <div class="comments"><img src="img/recipes/comment.svg" alt=""><span>12</span></div>
                   </div>
                 </div>
-                <div class="recipes__right-cards"></div>
+                <div class="recipes__right-cards">
+                  <div class="recipes__right-card">
+                    <p class="recipes__right-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                    <div class="recipes__right-card-functional">
+                      <div class="recipes__right-name">
+                        <div class="recipes__right-title">LUNCH</div>
+                        <div class="recipes__right-date">07 Jan 2023</div>
+                      </div>
+                      <div class="recipes__right-icons">
+                        <div class="watches"><img src="img/recipes/eye.svg" alt=""><span>275</span></div>
+                        <div class="comments"><img src="img/recipes/comment.svg" alt=""><span>12</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="recipes__right-card">
+                    <p class="recipes__right-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                    <div class="recipes__right-card-functional">
+                      <div class="recipes__right-name">
+                        <div class="recipes__right-title">LUNCH</div>
+                        <div class="recipes__right-date">07 Jan 2023</div>
+                      </div>
+                      <div class="recipes__right-icons">
+                        <div class="watches"><img src="img/recipes/eye.svg" alt=""><span>275</span></div>
+                        <div class="comments"><img src="img/recipes/comment.svg" alt=""><span>12</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="recipes__right-card">
+                    <p class="recipes__right-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                    <div class="recipes__right-card-functional">
+                      <div class="recipes__right-name">
+                        <div class="recipes__right-title">LUNCH</div>
+                        <div class="recipes__right-date">07 Jan 2023</div>
+                      </div>
+                      <div class="recipes__right-icons">
+                        <div class="watches"><img src="img/recipes/eye.svg" alt=""><span>275</span></div>
+                        <div class="comments"><img src="img/recipes/comment.svg" alt=""><span>12</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="social" id="social">
+          <div class="container">
+            <div class="social__description">
+              <div class="work__title-container title__container">
+                <h2 class="work__title title">SOCIAL</h2>
+                <h4 class="work__subtitle subtitle">We in Social</h4>
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="social__contacts">
+              <div class="social__contact twitter">
+                <div class="social__contact-follow">
+                  <div class="social__contact-icon"><img src="img/contacts/Twitter.svg" alt="twitter"></div>
+                  <p class="social__contact-name social__contact-title">Twitter</p>
+                  <button class="social__contact-btn"><a href="#">FOLLOW US</a></button>
+                </div>
+                <div class="social__contact-line"></div>
+                <div class="social__contact-descr">
+                  <div class="social__contact-date">24 Jun at 16:20 pm</div>
+                  <div class="social__contact-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam dolorem totam obcaecati quod autem a nesciunt accusantium nihil dolor? Ab iste at quam!</div>
+                  <div class="social__contact-link"><a href="#">@DennisFerguson</a></div>
+                </div>
+              </div>
+              <div class="social__contact twitter">
+                <div class="social__contact-follow">
+                  <div class="social__contact-icon"><img src="img/contacts/Instagram.svg" alt="instagram"></div>
+                  <p class="social__contact-name social__contact-title">Instagram</p>
+                  <button class="social__contact-btn"><a href="#">FOLLOW US</a></button>
+                </div>
+                <div class="social__contact-line"></div>
+                <div class="social__contact-descr">
+                  <div class="social__contact-date">24 Jun at 16:20 pm</div>
+                  <div class="social__contact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit labore aut alias provident excepturi vel molestias! Ab architecto iusto neque nam sit. Odio sint dicta quis, repudiandae inventore iusto non ea pariatur ipsam, autem voluptatibus sequi architecto! Deserunt temporibus minus officia numquam tenetur, quis iusto. Saepe aperiam explicabo suscipit sequi eveniet sapiente dolores exercitationem quaerat quibusdam distinctio aliquam sit minus quod odio cupiditate officiis natus ratione cumque, maxime doloremque vitae rerum.</div>
+                  <div class="social__contact-link"><a href="#">@DennisFerguson</a></div>
+                </div>
+              </div>
+              <div class="social__contact twitter">
+                <div class="social__contact-follow">
+                  <div class="social__contact-icon"><img src="img/contacts/Facebook.svg" alt="facebook"></div>
+                  <p class="social__contact-name social__contact-title">Facebook</p>
+                  <button class="social__contact-btn"><a href="#">FOLLOW US</a></button>
+                </div>
+                <div class="social__contact-line"></div>
+                <div class="social__contact-descr">
+                  <div class="social__contact-date">24 Jun at 16:20 pm</div>
+                  <div class="social__contact-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, totam quaerat. Harum voluptates eligendi minus architecto cupiditate sit praesentium nobis vel aspernatur sapiente mollitia odio est dolore optio animi nemo, ad dicta repudiandae fugit labore deserunt cum earum aliquam rem? Illum deserunt ea vero obcaecati, autem dolore harum reiciendis consectetur.</div>
+                  <div class="social__contact-link"><a href="#">@DennisFerguson</a></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer" id="footer">
+        <div class="container">
+          <div class="footer__descr">
+            <div class="header__contacts footer__contacts">
+              <div class="header__contacts-item">
+                <img src="img/icons/time.svg" alt="time" class="header__contacts-img">
+                <p class="header__contacts-title">Today 10:00 am - 7:00 pm</p>
+                <p class="header__contacts-subtitle">Working hours</p>
+              </div>
+              <div class="header__contacts-item">
+                <img src="img/icons/location.svg" alt="time" class="header__contacts-img">
+                <p class="header__contacts-title">Velyka Vasylkivska 100</p>
+                <p class="header__contacts-subtitle">Get Directions</p>
+              </div>
+              <div class="header__contacts-item">
+                <img src="img/icons/phone.svg" alt="time" class="header__contacts-img">
+                <p class="header__contacts-title">+38 (063)833 24 15</p>
+                <p class="header__contacts-subtitle">Call Online</p>
+              </div>
+            </div>
+            <div class="social__contact-line"></div>
+            <div class="footer__logo">
+              <div class="logo">
+                <a href="#" class="logo__link">
+                  <img src="img/Logo.svg" alt="" class="logo__icon">
+                  <h3 class="logo__text">HEALTHY SWITCHER</h3>
+                </a>
+              </div>
+              <p class="footer__logo-text">© Designed by Yellow Snow. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
       <div class="modal__form-shadow">
         <div class="modal__form">
           <div class="modal__form-close">&#10008;</div>
@@ -401,6 +525,7 @@
           </form>
         </div>
       </div>
+      <div class="scroll__to-top"><a class="fa-solid fa-arrow-up" href="#header"></a></div>
     </div>
     <script
       src="https://kit.fontawesome.com/e5c25d5a77.js"
