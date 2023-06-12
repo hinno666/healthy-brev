@@ -292,7 +292,7 @@ section:hover .line {
   margin: 16px auto 0px;
 }
 
-.button {
+/* .button {
   padding: 25px 57px;
   background: #34c759;
   border-radius: 43px;
@@ -301,15 +301,56 @@ section:hover .line {
   line-height: 22px;
   letter-spacing: 0.2em;
   color: #1a1a1a;
-  margin-top: 40px;
+  
   transition: 0.5s ease;
+} */
+
+/* .button:hover {
+  color: #bee4c1;
+  background: #17632a;
+} */
+
+.button {
+  padding: 25px 57px;
+ background: none;
+ border: 2px solid #fff;
+ font-size: 15px;
+ color: #131313;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+ transition: all 0.3s;
+ border-radius: 40px;
+ background-color: #34c759;
+ font-weight: bolder;
+ box-shadow: 0 2px 0 2px #000;
+ margin-top: 40px;
+}
+.button:before {
+ content: "";
+ position: absolute;
+ width: 100px;
+ height: 120%;
+ background-color: #00ff0054;
+ top: 50%;
+ transform: skewX(30deg) translate(-150%, -50%);
+ transition: all 0.5s;
 }
 
 .button:hover {
-  color: #bee4c1;
-  background: #17632a;
+ background-color: #02502c;
+ color: #fff;
+ box-shadow: 0 2px 0 2px #0d3b66;
 }
 
+.button:hover::before {
+ transform: skewX(30deg) translate(150%, -50%);
+ transition-delay: 0.1s;
+}
+
+.button:active {
+ transform: scale(0.9);
+}
 .header__contacts {
   display: flex;
   justify-content: space-between;
@@ -689,7 +730,9 @@ section {
   border-radius: 10px;
   transition: 0.5s ease;
 }
-
+.recipes__right-title:hover {
+  background: #17632aa2;
+}
 .recipes__right-icons {
   display: flex;
   align-items: center;
@@ -898,7 +941,7 @@ padding: 30px 0;
   }
 
   .menu__list {
-    height: 90vh;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -1041,4 +1084,36 @@ padding: 30px 0;
   top: 90%;
   right: 20px;
   font-size: 40px;
+}
+
+
+/*SVF*/
+
+path{ 
+  transition: 0.5s ease;
+}
+rect {
+  transition: 0.5s ease;
+}
+
+.twitter:hover .twitter__bg-color {
+  fill: rgb(29, 155, 240)
+}
+.twitter:hover .twiter__icon-color {
+  fill: white;
+}
+
+.instagram:hover .inst__bg-color {
+  fill: rgb(228, 64, 95);
+}
+.instagram:hover .inst__icon-color {
+  fill: white;
+}
+
+.facebook:hover .facebook__bg-color {
+  fill: #3b5998;
+}
+
+.facebook:hover .facebook__icon-color {
+  fill: white;
 }

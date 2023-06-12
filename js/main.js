@@ -66,12 +66,12 @@ cards.forEach((card) => {
   const ratingElement = card.querySelector(".rating");
   let selectedValue = parseInt(ratingElement.getAttribute("data-rating"));
 
-  stars.forEach((star) => {
+  stars.forEach((star, index) => {
     star.addEventListener("mouseover", () => {
       const hoverValue = parseInt(star.getAttribute("data-value"));
 
-      stars.forEach((star, index) => {
-        star.classList.toggle("selected", index < hoverValue);
+      stars.forEach((star, idx) => {
+        star.classList.toggle("selected", idx < hoverValue);
       });
     });
 
@@ -81,9 +81,15 @@ cards.forEach((card) => {
       selectedValue = clickedValue;
       ratingElement.setAttribute("data-rating", selectedValue);
 
-      stars.forEach((star, index) => {
-        star.classList.toggle("selected", index < selectedValue);
+      stars.forEach((star, idx) => {
+        star.classList.toggle("selected", idx < selectedValue);
       });
+    });
+  });
+
+  card.addEventListener("mouseout", () => {
+    stars.forEach((star, idx) => {
+      star.classList.toggle("selected", idx < selectedValue);
     });
   });
 
@@ -92,7 +98,7 @@ cards.forEach((card) => {
   });
 });
 
-//--------------------------------------------------------------------------------------------------//
+//----------------SCROLL---------------------------------------------------------------------//
 
 $(document).ready(function() {
   $('a[href^="#"]').on('click', function(event) {
