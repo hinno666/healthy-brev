@@ -1,16 +1,35 @@
-/*BURGER MENU && SLICK-SLIDER jQuery CODE*/
+
 $(document).ready(function () {
-  let menu = document.querySelector('.menu');
+  let menu = document.querySelector(".menu");
+  let menuItems = document.querySelectorAll(".menu__item"); // Выбираем все пункты меню
+
   $(".menu-burger__header").click(function () {
     $(".menu-burger__header").toggleClass("open-menu");
     $(menu).toggleClass("open-menu");
-    if(menu.classList.contains("open-menu")) {
-      document.body.style.overflow = "hidden";
-    }else {
-      document.body.style.overflow = "visible";
-    }
+        if (menu.classList.contains("open-menu")) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "visible";
+        }
   });
-  $('.slider').slick({
+      if (menu.classList.contains("open-menu")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "visible";
+      }
+
+  // Добавляем обработчик событий для пунктов меню
+  $(menuItems).click(function () {
+    $(".menu-burger__header").removeClass("open-menu");
+    $(menu).removeClass("open-menu");
+      if (menu.classList.contains("open-menu")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "visible";
+      }
+  });
+
+  $(".slider").slick({
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
@@ -20,12 +39,11 @@ $(document).ready(function () {
         breakpoint: 940,
         settings: {
           slidesToShow: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   });
 });
-
 //--------------------------------------------------------------------------------------------------//
 
 /*POPUP VANILA JS FUNCTIONAL*/
@@ -66,12 +84,12 @@ cards.forEach((card) => {
   const ratingElement = card.querySelector(".rating");
   let selectedValue = parseInt(ratingElement.getAttribute("data-rating"));
 
-  stars.forEach((star, index) => {
+  stars.forEach((star) => {
     star.addEventListener("mouseover", () => {
       const hoverValue = parseInt(star.getAttribute("data-value"));
 
-      stars.forEach((star, idx) => {
-        star.classList.toggle("selected", idx < hoverValue);
+      stars.forEach((star, index) => {
+        star.classList.toggle("selected", index < hoverValue);
       });
     });
 
@@ -81,15 +99,9 @@ cards.forEach((card) => {
       selectedValue = clickedValue;
       ratingElement.setAttribute("data-rating", selectedValue);
 
-      stars.forEach((star, idx) => {
-        star.classList.toggle("selected", idx < selectedValue);
+      stars.forEach((star, index) => {
+        star.classList.toggle("selected", index < selectedValue);
       });
-    });
-  });
-
-  card.addEventListener("mouseout", () => {
-    stars.forEach((star, idx) => {
-      star.classList.toggle("selected", idx < selectedValue);
     });
   });
 
@@ -98,7 +110,7 @@ cards.forEach((card) => {
   });
 });
 
-//----------------SCROLL---------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------//
 
 $(document).ready(function() {
   $('a[href^="#"]').on('click', function(event) {

@@ -916,7 +916,8 @@ padding: 30px 0;
   }
 
   .menu-burger__header {
-    position: relative;
+    position: fixed;
+    right: 10px;
     z-index: 101;
     width: 40px;
     height: 35px;
@@ -927,7 +928,7 @@ padding: 30px 0;
   .menu {
     z-index: 100;
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0px;
     bottom: 0;
     left: 0;
