@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   let menu = document.querySelector(".menu");
   let menuItems = document.querySelectorAll(".menu__item"); // Выбираем все пункты меню
@@ -6,27 +5,27 @@ $(document).ready(function () {
   $(".menu-burger__header").click(function () {
     $(".menu-burger__header").toggleClass("open-menu");
     $(menu).toggleClass("open-menu");
-        if (menu.classList.contains("open-menu")) {
-          document.body.style.overflow = "hidden";
-        } else {
-          document.body.style.overflow = "visible";
-        }
+    if (menu.classList.contains("open-menu")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
   });
-      if (menu.classList.contains("open-menu")) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "visible";
-      }
+  if (menu.classList.contains("open-menu")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "visible";
+  }
 
   // Добавляем обработчик событий для пунктов меню
   $(menuItems).click(function () {
     $(".menu-burger__header").removeClass("open-menu");
     $(menu).removeClass("open-menu");
-      if (menu.classList.contains("open-menu")) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "visible";
-      }
+    if (menu.classList.contains("open-menu")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
   });
 
   $(".slider").slick({
@@ -47,31 +46,26 @@ $(document).ready(function () {
 //--------------------------------------------------------------------------------------------------//
 
 /*POPUP VANILA JS FUNCTIONAL*/
-let openPopup = document.querySelectorAll('.button');
-let closePopup = document.querySelector('.modal__form-close');
-let popup = document.querySelector('.modal__form-shadow');
-
-
+let openPopup = document.querySelectorAll(".button");
+let closePopup = document.querySelector(".modal__form-close");
+let popup = document.querySelector(".modal__form-shadow");
 
 function open() {
-  popup.classList.add('open__popup');
-
+  popup.classList.add("open__popup");
 }
 function close() {
-  popup.classList.remove('open__popup')
+  popup.classList.remove("open__popup");
 }
 
 openPopup.forEach((btn) => {
   btn.addEventListener("click", open);
-
 });
-closePopup.addEventListener('click', close);
+closePopup.addEventListener("click", close);
 
-
-window.addEventListener('click', (e) => {
-    if(e.target === popup) {
-        close();
-    }
+window.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    close();
+  }
 });
 
 //--------------------------------------------------------------------------------------------------//
@@ -112,14 +106,17 @@ cards.forEach((card) => {
 
 //--------------------------------------------------------------------------------------------------//
 
-$(document).ready(function() {
-  $('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
+$(document).ready(function () {
+  $('a[href^="#"]').on("click", function (event) {
+    var target = $(this.getAttribute("href"));
     if (target.length) {
       event.preventDefault();
-      $('html, body').stop().animate({
-        scrollTop: target.offset().top
-      }, 1000); // Adjust the duration (in milliseconds) as needed
+      $("html, body").stop().animate(
+        {
+          scrollTop: target.offset().top,
+        },
+        1000
+      ); // Adjust the duration (in milliseconds) as needed
     }
   });
 });
