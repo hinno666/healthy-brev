@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'HelveticaNeueCyr-Black';
+  src: url('helveticaneuecyr_black.otf') format('opentype');
+}
+
 /*Обнуление*/
 * {
   padding: 0;
@@ -101,7 +106,7 @@ html {
   scroll-behavior:unset;
 }
 body {
-  font-family: HelveticaNeueCyr, sans-serif;
+  font-family: HelveticaNeue, sans-serif;
   background-color: #191919;
   color: #a6a6a6;
 }
