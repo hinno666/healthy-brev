@@ -79,14 +79,6 @@ cards.forEach((card) => {
   let selectedValue = parseInt(ratingElement.getAttribute("data-rating"));
 
   stars.forEach((star) => {
-    star.addEventListener("mouseover", () => {
-      const hoverValue = parseInt(star.getAttribute("data-value"));
-
-      stars.forEach((star, index) => {
-        star.classList.toggle("selected", index < hoverValue);
-      });
-    });
-
     star.addEventListener("click", () => {
       const clickedValue = parseInt(star.getAttribute("data-value"));
 
@@ -107,8 +99,18 @@ cards.forEach((card) => {
 //--------------------------------------------------------------------------------------------------//
 
 $(document).ready(function () {
+  $(".scroll__to-top").hide();
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > $("header").height()) {
+      $(".scroll__to-top").fadeIn();
+    } else {
+      $(".scroll__to-top").fadeOut();
+    }
+  });
+  
   $('a[href^="#"]').on("click", function (event) {
-    var target = $(this.getAttribute("href"));
+    let target = $(this.getAttribute("href"));
     if (target.length) {
       event.preventDefault();
       $("html, body").stop().animate(
@@ -116,7 +118,7 @@ $(document).ready(function () {
           scrollTop: target.offset().top,
         },
         1000
-      ); // Adjust the duration (in milliseconds) as needed
+      );
     }
   });
 });

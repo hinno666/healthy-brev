@@ -1084,9 +1084,13 @@ padding: 30px 0;
 .scroll__to-top {
   position: fixed;
   color: #12a036;
+  padding: 10px;
+  border-radius: 50%;
+  background: #135333;
   top: 90%;
   right: 20px;
   font-size: 40px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 
