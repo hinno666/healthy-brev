@@ -297,7 +297,7 @@ section:hover .line {
   margin: 16px auto 0px;
 }
 
-/* .button {
+.feedback-form__button {
   padding: 25px 57px;
   background: #34c759;
   border-radius: 43px;
@@ -308,12 +308,12 @@ section:hover .line {
   color: #1a1a1a;
   
   transition: 0.5s ease;
-} */
+} 
 
-/* .button:hover {
+.feedback-form__button:hover {
   color: #bee4c1;
   background: #17632a;
-} */
+}
 
 .button {
   padding: 25px 57px;
@@ -1083,13 +1083,13 @@ padding: 30px 0;
 
 .scroll__to-top {
   position: fixed;
-  color: #12a036;
+  color: #118a51;
   width: 60px;
   height: 60px;
   text-align: center;
   padding: 10px;
   border-radius: 50%;
-  background: #135333;
+  background: #303030;
   top: 90%;
   right: 20px;
   font-size: 40px;
