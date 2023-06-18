@@ -601,13 +601,13 @@ section {
 }
 
 .star {
-  transition: color 0.2s;
+  color: #ccc;
   cursor: pointer;
 }
 
 .star:hover,
-.star.selected {
-  color: gold;
+.star.active {
+  color: yellow;
 }
 
 /*RECIPES*/

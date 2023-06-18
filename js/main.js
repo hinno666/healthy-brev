@@ -71,31 +71,43 @@ window.addEventListener("click", (e) => {
 //--------------------------------------------------------------------------------------------------//
 
 //STARS VANILA JS FUNCTIONAL
-const cards = document.querySelectorAll(".dishes__card");
+const ratingContainers = document.querySelectorAll('.rating');
 
-cards.forEach((card) => {
-  const stars = card.querySelectorAll(".star");
-  const ratingElement = card.querySelector(".rating");
-  let selectedValue = parseInt(ratingElement.getAttribute("data-rating"));
+ratingContainers.forEach((ratingContainer) => {
+  const stars = ratingContainer.querySelectorAll('.star');
+  let currentRating = 0;
 
   stars.forEach((star) => {
-    star.addEventListener("click", () => {
-      const clickedValue = parseInt(star.getAttribute("data-value"));
+    star.addEventListener('mouseover', (e) => {
+      fillStarsUpTo(stars, parseInt(e.target.getAttribute('data-value')));
+    });
 
-      selectedValue = clickedValue;
-      ratingElement.setAttribute("data-rating", selectedValue);
+    star.addEventListener('mouseout', () => {
+      fillStarsUpTo(stars, currentRating);
+    });
 
-      stars.forEach((star, index) => {
-        star.classList.toggle("selected", index < selectedValue);
-      });
+    star.addEventListener('click', (e) => {
+      currentRating = parseInt(e.target.getAttribute('data-value'));
+      ratingContainer.setAttribute('data-rating', currentRating);
     });
   });
 
-  stars.forEach((star, index) => {
-    star.classList.toggle("selected", index < selectedValue);
+  window.addEventListener('load', () => {
+    currentRating = parseInt(ratingContainer.getAttribute('data-rating'));
+    fillStarsUpTo(stars, currentRating);
   });
 });
 
+function fillStarsUpTo(stars, value) {
+  stars.forEach((star) => {
+    const starValue = parseInt(star.getAttribute('data-value'));
+    if (starValue <= value) {
+      star.classList.add('active');
+    } else {
+      star.classList.remove('active');
+    }
+  });
+}
 //--------------------------------------------------------------------------------------------------//
 
 $(document).ready(function () {
