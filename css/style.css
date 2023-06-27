@@ -557,6 +557,7 @@ section {
 
 .dishes__card-img img {
   border-radius: 7px 7px 0px 0px;
+  width: 100%;
 }
 
 .dishes__card-descr {
@@ -1093,9 +1094,12 @@ padding: 30px 0;
   top: 90%;
   right: 20px;
   font-size: 40px;
-  transition: opacity 0.3s ease-in-out;
+  transition: 0.3s ease;
 }
-
+.scroll__to-top:hover {
+  color: #303030;
+  background: #118a51;
+}
 
 /*SVF*/
 
