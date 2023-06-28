@@ -879,6 +879,20 @@ padding: 30px 0;
   width: 100%;
 
 }
+
+
+section {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.8s; 
+}
+
+section.visible {
+  opacity: 1;
+  transform: scale(1); 
+}
+
+
 /*MEDIA QUERIES*/
 @media (max-width: 930px) {
   .header__title {

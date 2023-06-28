@@ -1,3 +1,26 @@
+document.addEventListener('DOMContentLoaded', function() {
+  let sections = document.querySelectorAll('section');
+
+  function checkInView() {
+    let windowHeight = window.innerHeight;
+
+    for (let i = 0; i < sections.length; i++) {
+      let section = sections[i];
+      let sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop < windowHeight) {
+        section.classList.add('visible');
+      } else {
+        section.classList.remove('visible');
+      }
+    }
+  }
+
+  checkInView();
+
+  window.addEventListener('scroll', checkInView);
+});
+
 $(document).ready(function () {
   let menu = document.querySelector(".menu");
   let menuItems = document.querySelectorAll(".menu__item"); // Выбираем все пункты меню
@@ -41,6 +64,10 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+    $('.flip').click(function(){
+    $('.cont-flip').toggleClass('flipped');
+    return false;
   });
 });
 //--------------------------------------------------------------------------------------------------//
@@ -134,3 +161,8 @@ $(document).ready(function () {
     }
   });
 });
+
+
+
+
+
