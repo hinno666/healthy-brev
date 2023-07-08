@@ -1053,6 +1053,7 @@ section.visible {
 /*MEDIA QUERIES*/
 @media (max-width: 1019px) {
   .map iframe {
+    height: 400px;
     box-shadow: none;
     border-radius: 0px;
   }

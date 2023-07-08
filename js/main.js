@@ -161,7 +161,6 @@ $(document).ready(function () {
     }
   });
   $('.input-at[name="phone-at"]').inputmask('+7 (999) 999-99-99');
-
 });
 
 
