@@ -211,12 +211,10 @@
                 </div>
                 <div class="dishes__card-descr">
                   <div class="dishes__card-title">Schrek feels pain</div>
-                  <div class="dishes__card-subtitle">
-                    It`s not funny
-                  </div>
+                  <div class="dishes__card-subtitle">It`s not funny</div>
                   <div class="dishes__card-text">
-                    Why did Shrek wince in pain?
-                    Because he got hit in the oggs!...
+                    Why did Shrek wince in pain? Because he got hit in the
+                    oggs!...
                   </div>
                   <div class="dishes__card-raiting">
                     <div class="rating" data-rating="4">
@@ -511,7 +509,9 @@
                     accusantium nihil dolor? Ab iste at quam!
                   </div>
                   <div class="social__contact-link">
-                    <a href="http://twitter.com" target="_blank">@DennisFerguson</a>
+                    <a href="http://twitter.com" target="_blank"
+                      >@DennisFerguson</a
+                    >
                   </div>
                 </div>
               </div>
@@ -721,8 +721,84 @@
         </section>
       </main>
       <footer class="footer" id="footer">
+        <section class="footer-block">
         <div class="container">
           <div class="footer__descr">
+            <div class="work__title-container title__container">
+              <h2 class="work__title title">Contact</h2>
+              <h4 class="work__subtitle subtitle">With Us</h4>
+              <div class="line"></div>
+            </div>
+            <div class="footer__form">
+              <div class="forma">
+                <div class="form-at">
+                  <div
+                    class="validate-input-at w-50"
+                    data-validate="Обязательное поле"
+                  >
+                    <input
+                      class="input-at"
+                      type="text"
+                      name="name-at"
+                      placeholder="Ваше имя"
+                    />
+                    <span class="focus-input-at"></span>
+                  </div>
+                  <div
+                    class="validate-input-at w-50"
+                    data-validate="Обязательное поле"
+                  >
+                    <input
+                      class="input-at"
+                      type="text"
+                      name="phone-at"
+                      placeholder="Ваш телефон или email"
+                    />
+                    <span class="focus-input-at"></span>
+                  </div>
+                  <div
+                    class="validate-input-at"
+                    data-validate="Обязательное поле"
+                  >
+                    <textarea
+                      class="input-at"
+                      name="message-at"
+                      placeholder="Ваше сообщение"
+                    ></textarea>
+                    <span class="focus-input-at"></span>
+                  </div>
+                  <input
+                    checked="checked"
+                    class="input-at"
+                    id="checkbox-at"
+                    type="checkbox"
+                    name="checkbox-at"
+                    onchange="document.getElementById('submit-at').disabled = !this.checked;"
+                  />
+                  <label for="checkbox-at">
+                    Настоящим подтверждаю, что я ознакомлен и согласен с
+                    <a href="#rules">пользовательским соглашением</a>
+                  </label>
+                  <input type="hidden" name="subject-at" value="Тема формы" />
+                  <button id="submit-at" class="form-at-btn">Отправить</button>
+                </div>
+                <div class="result-at"></div>
+              </div>
+
+              <div class="map-wrapper">
+                <div class="map">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=false&amp;um=constructor%3A223b83bf1a51781365aa1f9bfed4743397ad1f36189642a1514738a0339ad9ff"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    width="100%"
+                    height="720px"
+                    style="display: block"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
             <div class="header__contacts footer__contacts">
               <div class="header__contacts-item">
                 <img
@@ -757,49 +833,6 @@
               </div>
             </div>
             <div class="social__contact-line"></div>
-            <div class="footer__form">
-              <form class="feedback-form">
-                <h2 class="feedback-form__title">Свяжитесь с нами</h2>
-                <div class="feedback-form__group">
-                  <label class="feedback-form__label" for="name">Имя:</label>
-                  <input
-                    placeholder="Шрек Олегович"
-                    class="feedback-form__input"
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                  />
-                </div>
-                <div class="feedback-form__group">
-                  <label class="feedback-form__label" for="email">Email:</label>
-                  <input
-                    placeholder="schrek228@mail.ru"
-                    class="feedback-form__input"
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                  />
-                </div>
-                <div class="feedback-form__group">
-                  <label class="feedback-form__label" for="message"
-                    >Сообщение:</label
-                  >
-                  <textarea
-                    placeholder="Напишите, что хотите покушать..."
-                    class="feedback-form__input feedback-form__textarea"
-                    id="message"
-                    name="message"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
-                <button class="feedback-form__button" type="submit">
-                  Отправить
-                </button>
-              </form>
-            </div>
             <div class="footer__logo">
               <div class="logo">
                 <a href="#" class="logo__link">
@@ -807,12 +840,11 @@
                   <h3 class="logo__text">HEALTHY SWITCHER</h3>
                 </a>
               </div>
-              <p class="footer__logo-text">
-                © created by Andrey Karpov
-              </p>
+              <p class="footer__logo-text">© created by Andrey Karpov</p>
             </div>
           </div>
         </div>
+      </section>
       </footer>
       <div class="modal__form-shadow">
         <div class="modal__form">
@@ -870,6 +902,7 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7-beta.23/jquery.inputmask.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
