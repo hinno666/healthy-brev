@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let section = sections[i];
       let sectionTop = section.getBoundingClientRect().top;
 
-      if (sectionTop < windowHeight) {
+      if (sectionTop <= windowHeight) {
         section.classList.add('visible');
       } else {
         section.classList.remove('visible');
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', checkInView);
 });
+
 
 $(document).ready(function () {
   let menu = document.querySelector(".menu");
